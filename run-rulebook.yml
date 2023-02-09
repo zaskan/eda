@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  gather_facts: no
+  
+  tasks: 
+    - name: Run rulebook
+      command: JAVA_HOME=/usr/lib/jvm/java-17-openjdk ansible-rulebook --rulebook webhook-example.yml -i inventory.yml --verbose
+        ldap: true
+        proxy: true
